@@ -119,6 +119,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_catalog/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 // Scallfold widget use karne ke liye hum new class banayi or usko main file mai import kardiye
 
 // Ye yaha pe isliye import huwa hai kyki humne structuring karne ke liye lib mai ek folder banaye hai jiska naam diye hai pages or usme humara folder hai homepage.dart
@@ -182,23 +183,27 @@ class MyApp extends StatelessWidget {
 
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
-          // Agar page pe theme dena hai toh ayse dege ye clean code likha huwa hai ...Per ek chiz boluga jaise aapne diye brightness.dark or fhir primary swatch doge kuch bhi color toh fhir bhi woh dark rahega kyuki dark mai nhi hota hai light mai theme chnage hoga
-          brightness: Brightness.light,
-          // andar app bar ye sab ka color chnage karsakte hai by default blue aata hai per apan red green yellow kuch bhi kar sakte hai
-          primarySwatch: Colors.deepPurple),
+        // Agar page pe theme dena hai toh ayse dege ye clean code likha huwa hai ...Per ek chiz boluga jaise aapne diye brightness.dark or fhir primary swatch doge kuch bhi color toh fhir bhi woh dark rahega kyuki dark mai nhi hota hai light mai theme chnage hoga
+        brightness: Brightness.light,
+        // andar app bar ye sab ka color chnage karsakte hai by default blue aata hai per apan red green yellow kuch bhi kar sakte hai
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
+
+      // primaryTextTheme: GoogleFonts.latoTextTheme(),
       // Routes are like key value value pair and routes are of 4 types initial routes , onunknown routes ,on generate routes , ongenerateinitial routes
       // Routes mean intent or activity rasta
       // Key value pair like dictionaRY OR hashmap
       // Toh ye aysa kaam karta hai niche slash / use kare the woh bydefault home lear tha otr usme humne loginpage diye the per a b hum chahte hai ki yehi page print howe toh isko dege initial routes joh isko or initial route dekhe is me class define kardege woh print hojayegi ismme
-      initialRoute: "/homepage",
+      // initialRoute: "/homepage",
       routes: {
         // slash/ by default hota hai slash mai joh double couts mai hai woh string uske andar ki value key hai value mai hum dere page ke naam jaisa humne diya home page joh error fhekega kyuki usko pehle hi humne call kar chuke hai jaise tum slash / daaloge toh woh by default home hi lega
-
+// Kitni bhi routes de sakte hai
 // Class joh hoti hai uska naming convention kaisa hota hai aysa samajlo class first word Capital hota and then second woord bhi capital example CapitalHamza per function mai naming convention kaisi hoti hai example capitalHamza samje ... ab hum jab dusri class mai jaake likhege apni class ko toh woh object banega per dart ka joh compiler hai woh bohot smartt hai usko new LoginPage define karne ki jarwat nhi hai woh bine new LoginPage ke bhi ye chiz jaanta hai ke agla object bana na chahata hai okay easy hai
 // Bydefault slash / hi use hoga isme usme aap isko joh routes doge usko home page lekar dega but aap chahte ho ke homepage ab use ho toh aap usko initial routes mai define karoge woh kaisa karoge aapko uppar dekhne milega uppar dekho initial routes
         "/": ((context) => LoginPage()), //creating object of out class..
-        "/homepage": (context) => HomePage(),
-        "/Login": (context) => LoginPage(),
+        // "/homepage": (context) => HomePage(),
+        // "/Login": (context) => LoginPage(),
       },
     );
 

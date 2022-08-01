@@ -1,3 +1,9 @@
+// # To add assets to your application, add an assets section, like this:
+//   assets:
+//   # Ye path joh hai humare imge ka folder ka hai 2 step hao image folder bana ne ke first assets naam ka folder banao usme images naam ka folder banao then usme photo daaldo or fhir uska path pubspec.uaml mai dedo bus
+//     - assets/images/
+//   // #   - images/a_dot_ham.jpeg
+
 import 'package:flutter/material.dart';
 
 // Flutter bhi void main se hi start hota hai
